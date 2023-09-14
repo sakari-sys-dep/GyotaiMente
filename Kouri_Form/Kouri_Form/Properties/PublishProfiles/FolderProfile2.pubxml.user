@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>\\g-ap01\Apps\Kouri_Form</_PublishTargetUrl>
+    <History>True|2023-04-17T08:43:15.3984554Z;True|2023-04-17T17:21:43.4550014+09:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>05/20/2020 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Kouri_Form.dll">
+      <publishTime>04/17/2023 17:43:03</publishTime>
+    </File>
+    <File Include="bin/Kouri_Form.pdb">
+      <publishTime>04/17/2023 17:43:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="Contents/KouriCheck.aspx">
+      <publishTime>03/16/2023 10:16:06</publishTime>
+    </File>
+    <File Include="Contents/KouriCheck________old.aspx">
+      <publishTime>03/14/2023 10:55:43</publishTime>
+    </File>
+    <File Include="Contents/KouriMstCnv.aspx">
+      <publishTime>03/16/2023 10:19:08</publishTime>
+    </File>
+    <File Include="Contents/KouriMstCnv________old.aspx">
+      <publishTime>03/14/2023 16:15:31</publishTime>
+    </File>
+    <File Include="Contents/KouriUpdateDaily.aspx">
+      <publishTime>03/16/2023 10:19:07</publishTime>
+    </File>
+    <File Include="Contents/KouriUpdateDaily________old.aspx">
+      <publishTime>03/09/2023 16:27:18</publishTime>
+    </File>
+    <File Include="Contents/KouriUpdateKM08D.aspx">
+      <publishTime>03/20/2023 11:46:29</publishTime>
+    </File>
+    <File Include="Contents/KouriUpdateKM08D________old.aspx">
+      <publishTime>03/10/2023 13:32:12</publishTime>
+    </File>
+    <File Include="Contents/KouriUpdateMonthly.aspx">
+      <publishTime>03/16/2023 10:19:08</publishTime>
+    </File>
+    <File Include="Contents/KouriUpdateMonthly________old.aspx">
+      <publishTime>03/14/2023 13:29:03</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/24/2022 11:56:25</publishTime>
+    </File>
+    <File Include="KouriManualMenu.aspx">
+      <publishTime>03/06/2023 15:24:01</publishTime>
+    </File>
+    <File Include="KouriMasterMenu.aspx">
+      <publishTime>04/03/2023 16:43:25</publishTime>
+    </File>
+    <File Include="kouriMenu.aspx">
+      <publishTime>04/17/2023 16:45:16</publishTime>
+    </File>
+    <File Include="kouriMenu________old.aspx">
+      <publishTime>03/15/2023 09:27:37</publishTime>
+    </File>
+    <File Include="KouritenAchievement/AchievementRegistrationMenu.aspx">
+      <publishTime>03/06/2023 15:51:08</publishTime>
+    </File>
+    <File Include="KouritenAchievement/KouritenCorrectionDeleteAchievements.aspx">
+      <publishTime>03/02/2023 15:03:36</publishTime>
+    </File>
+    <File Include="KouritenAchievement/KouritenRegistrationAchievements.aspx">
+      <publishTime>03/02/2023 12:02:51</publishTime>
+    </File>
+    <File Include="KouritenAchievement/orositenSearchdialog.aspx">
+      <publishTime>03/02/2023 10:38:31</publishTime>
+    </File>
+    <File Include="KouritenAchievement/ShohinSearchdialog.aspx">
+      <publishTime>03/02/2023 11:30:01</publishTime>
+    </File>
+    <File Include="Manual/KouriManual.aspx">
+      <publishTime>03/30/2022 14:01:17</publishTime>
+    </File>
+    <File Include="Manual/KouriManualSAM.aspx">
+      <publishTime>03/30/2022 13:57:59</publishTime>
+    </File>
+    <File Include="Master/MstCnvOrosi.aspx">
+      <publishTime>04/03/2023 16:48:18</publishTime>
+    </File>
+    <File Include="Master/MstCnvOrosi________old.aspx">
+      <publishTime>03/16/2023 13:54:36</publishTime>
+    </File>
+    <File Include="Master/MstCnvShohn.aspx">
+      <publishTime>04/03/2023 16:48:20</publishTime>
+    </File>
+    <File Include="Master/MstCnvShohn________old.aspx">
+      <publishTime>03/16/2023 17:33:03</publishTime>
+    </File>
+    <File Include="Master/MstCnvTokui.aspx">
+      <publishTime>04/03/2023 16:48:21</publishTime>
+    </File>
+    <File Include="Master/MstCnvTokui________old.aspx">
+      <publishTime>03/22/2023 14:06:21</publishTime>
+    </File>
+    <File Include="Master/MstCnvTori.aspx">
+      <publishTime>04/03/2023 16:48:24</publishTime>
+    </File>
+    <File Include="Master/MstCnvTori________old.aspx">
+      <publishTime>03/23/2023 09:50:24</publishTime>
+    </File>
+    <File Include="Master/MstFuyoTori.aspx">
+      <publishTime>04/03/2023 16:48:25</publishTime>
+    </File>
+    <File Include="Master/MstFuyoTori________old.aspx">
+      <publishTime>03/23/2023 15:07:14</publishTime>
+    </File>
+    <File Include="Master/MstKouriten.aspx">
+      <publishTime>04/03/2023 16:48:19</publishTime>
+    </File>
+    <File Include="Master/MstKouriten________old.aspx">
+      <publishTime>03/24/2023 09:40:56</publishTime>
+    </File>
+    <File Include="MstStyle.css">
+      <publishTime>04/08/2022 17:56:31</publishTime>
+    </File>
+    <File Include="style.css">
+      <publishTime>03/15/2023 17:11:40</publishTime>
+    </File>
+    <File Include="Test/MstOroshiten.aspx">
+      <publishTime>03/07/2023 14:11:10</publishTime>
+    </File>
+    <File Include="Test/MstOroshitenMente.aspx">
+      <publishTime>03/25/2022 13:41:16</publishTime>
+    </File>
+    <File Include="Test/TstOutputList.aspx">
+      <publishTime>04/01/2022 15:32:18</publishTime>
+    </File>
+    <File Include="Test/WebForm1TEST.aspx">
+      <publishTime>03/07/2023 15:25:59</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/17/2023 17:43:14</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

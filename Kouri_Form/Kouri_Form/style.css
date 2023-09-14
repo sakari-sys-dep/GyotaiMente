@@ -1,0 +1,116 @@
+﻿body {
+}
+
+/*見出し*/
+h1 {
+    color: #6594e0; /*文字色*/
+    /*線の種類（点線）2px 黒色*/
+    border-bottom: solid 2px black;
+}
+
+table.example {
+    margin: auto;
+}
+
+#example {
+    margin: auto;
+}
+
+
+
+
+/*
+    テキストボックス８桁
+*/
+input.default8 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 80px;
+    height: 20px;
+    text-align:center;
+}
+input.design8 {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 80px;
+    height: 20px;
+    text-align: center;
+}
+input.design6 {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 60px;
+    height: 20px;
+    text-align: center;
+}
+input.design2 {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 25px;
+    height: 20px;
+    text-align: center;
+}
+input.design3 {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 35px;
+    height: 20px;
+    text-align: center;
+}
+
+.btn-square-shadow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8; /*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    width: 150px;
+}
+    .btn-square-shadow:hover {
+        opacity: 0.7;
+    }
+
+    .btn-square-shadow:active {
+       /* ボタンを押したとき*/
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px); /*下に動く*/
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
+        border-bottom: none;
+        width: 150px;
+    }
+
+.btn-left-right-arrow-design {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 8px;
+    border-radius: 3px;
+    background: #FFFFFF; /**/
+    border: none;
+    height: 25px;
+    width: 35px;
+}
+
+    .btn-left-right-arrow-design:hover {
+        background: #000000; /**/
+        color: #FFF;
+        opacity: 0.7;
+    }
+
+.btn-calendar-month-design {
+    text-align: center;
+    background: #FFFFFF; /**/
+    height: 26px;
+    width: 44px;
+}
+
+    .btn-calendar-month-design:hover {
+        background: #000000; /**/
+        color: #FFF;
+        opacity: 0.7;
+    }
+
+
+

@@ -1,0 +1,431 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09A59670-7EF6-4FB5-BA82-67B192814655}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kouri_Form</RootNamespace>
+    <AssemblyName>Kouri_Form</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contents\KouriCheck.aspx" />
+    <Content Include="Contents\KouriCheck________old.aspx" />
+    <Content Include="Contents\KouriMstCnv________old.aspx" />
+    <Content Include="Contents\KouriMstCnv.aspx" />
+    <Content Include="Contents\KouriUpdateDaily.aspx" />
+    <Content Include="Contents\KouriUpdateDaily________old.aspx" />
+    <Content Include="Contents\KouriUpdateKM08D________old.aspx" />
+    <Content Include="Contents\KouriUpdateKM08D.aspx" />
+    <Content Include="Contents\KouriUpdateMonthly________old.aspx" />
+    <Content Include="Contents\KouriUpdateMonthly.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="KouriMasterMenu.aspx" />
+    <Content Include="KouriManualMenu.aspx" />
+    <Content Include="kouriMenu________old.aspx" />
+    <Content Include="kouriMenu.aspx" />
+    <Content Include="Manual\KouriManual.aspx" />
+    <Content Include="Manual\KouriManualSAM.aspx" />
+    <Content Include="Master\MstCnvOrosi________old.aspx" />
+    <Content Include="Master\MstCnvOrosi.aspx" />
+    <Content Include="Master\MstCnvShohn________old.aspx" />
+    <Content Include="Master\MstCnvShohn.aspx" />
+    <Content Include="Master\MstCnvTokui________old.aspx" />
+    <Content Include="Master\MstCnvTokui.aspx" />
+    <Content Include="Master\MstCnvTori________old.aspx" />
+    <Content Include="Master\MstCnvTori.aspx" />
+    <Content Include="Master\MstFuyoTori________old.aspx" />
+    <Content Include="Master\MstFuyoTori.aspx" />
+    <Content Include="Master\MstKouriten________old.aspx" />
+    <Content Include="Master\MstKouriten.aspx" />
+    <Content Include="KouritenAchievement\AchievementRegistrationMenu.aspx" />
+    <Content Include="KouritenAchievement\KouritenCorrectionDeleteAchievements.aspx" />
+    <Content Include="KouritenAchievement\KouritenRegistrationAchievements.aspx" />
+    <Content Include="KouritenAchievement\orositenSearchdialog.aspx" />
+    <Content Include="KouritenAchievement\ShohinSearchdialog.aspx" />
+    <Content Include="MstStyle.css" />
+    <Content Include="style.css" />
+    <Content Include="Test\MstOroshiten.aspx" />
+    <Content Include="Test\MstOroshitenMente.aspx" />
+    <Content Include="Test\TstOutputList.aspx" />
+    <Content Include="Test\WebForm1TEST.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\constSql.cs" />
+    <Compile Include="Class\DBManager.cs" />
+    <Compile Include="Contents\KouriCheck.aspx.cs">
+      <DependentUpon>KouriCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriCheck.aspx.designer.cs">
+      <DependentUpon>KouriCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriCheck________old.aspx.cs">
+      <DependentUpon>KouriCheck________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriCheck________old.aspx.designer.cs">
+      <DependentUpon>KouriCheck________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriMstCnv________old.aspx.cs">
+      <DependentUpon>KouriMstCnv________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriMstCnv________old.aspx.designer.cs">
+      <DependentUpon>KouriMstCnv________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriMstCnv.aspx.cs">
+      <DependentUpon>KouriMstCnv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriMstCnv.aspx.designer.cs">
+      <DependentUpon>KouriMstCnv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateDaily.aspx.cs">
+      <DependentUpon>KouriUpdateDaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateDaily.aspx.designer.cs">
+      <DependentUpon>KouriUpdateDaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateDaily________old.aspx.cs">
+      <DependentUpon>KouriUpdateDaily________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateDaily________old.aspx.designer.cs">
+      <DependentUpon>KouriUpdateDaily________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateKM08D________old.aspx.cs">
+      <DependentUpon>KouriUpdateKM08D________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateKM08D________old.aspx.designer.cs">
+      <DependentUpon>KouriUpdateKM08D________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateKM08D.aspx.cs">
+      <DependentUpon>KouriUpdateKM08D.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateKM08D.aspx.designer.cs">
+      <DependentUpon>KouriUpdateKM08D.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateMonthly________old.aspx.cs">
+      <DependentUpon>KouriUpdateMonthly________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateMonthly________old.aspx.designer.cs">
+      <DependentUpon>KouriUpdateMonthly________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateMonthly.aspx.cs">
+      <DependentUpon>KouriUpdateMonthly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contents\KouriUpdateMonthly.aspx.designer.cs">
+      <DependentUpon>KouriUpdateMonthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KouriMasterMenu.aspx.cs">
+      <DependentUpon>KouriMasterMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KouriMasterMenu.aspx.designer.cs">
+      <DependentUpon>KouriMasterMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouriManualMenu.aspx.cs">
+      <DependentUpon>KouriManualMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KouriManualMenu.aspx.designer.cs">
+      <DependentUpon>KouriManualMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kouriMenu________old.aspx.cs">
+      <DependentUpon>kouriMenu________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kouriMenu________old.aspx.designer.cs">
+      <DependentUpon>kouriMenu________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kouriMenu.aspx.cs">
+      <DependentUpon>kouriMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kouriMenu.aspx.designer.cs">
+      <DependentUpon>kouriMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manual\KouriManual.aspx.cs">
+      <DependentUpon>KouriManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manual\KouriManual.aspx.designer.cs">
+      <DependentUpon>KouriManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manual\KouriManualSAM.aspx.cs">
+      <DependentUpon>KouriManualSAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manual\KouriManualSAM.aspx.designer.cs">
+      <DependentUpon>KouriManualSAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvOrosi________old.aspx.cs">
+      <DependentUpon>MstCnvOrosi________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvOrosi________old.aspx.designer.cs">
+      <DependentUpon>MstCnvOrosi________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvOrosi.aspx.cs">
+      <DependentUpon>MstCnvOrosi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvOrosi.aspx.designer.cs">
+      <DependentUpon>MstCnvOrosi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvShohn________old.aspx.cs">
+      <DependentUpon>MstCnvShohn________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvShohn________old.aspx.designer.cs">
+      <DependentUpon>MstCnvShohn________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvShohn.aspx.cs">
+      <DependentUpon>MstCnvShohn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvShohn.aspx.designer.cs">
+      <DependentUpon>MstCnvShohn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvTokui________old.aspx.cs">
+      <DependentUpon>MstCnvTokui________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvTokui________old.aspx.designer.cs">
+      <DependentUpon>MstCnvTokui________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvTokui.aspx.cs">
+      <DependentUpon>MstCnvTokui.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvTokui.aspx.designer.cs">
+      <DependentUpon>MstCnvTokui.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvTori________old.aspx.cs">
+      <DependentUpon>MstCnvTori________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvTori________old.aspx.designer.cs">
+      <DependentUpon>MstCnvTori________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstCnvTori.aspx.cs">
+      <DependentUpon>MstCnvTori.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstCnvTori.aspx.designer.cs">
+      <DependentUpon>MstCnvTori.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstFuyoTori________old.aspx.cs">
+      <DependentUpon>MstFuyoTori________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstFuyoTori________old.aspx.designer.cs">
+      <DependentUpon>MstFuyoTori________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstFuyoTori.aspx.cs">
+      <DependentUpon>MstFuyoTori.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstFuyoTori.aspx.designer.cs">
+      <DependentUpon>MstFuyoTori.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstKouriten________old.aspx.cs">
+      <DependentUpon>MstKouriten________old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstKouriten________old.aspx.designer.cs">
+      <DependentUpon>MstKouriten________old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MstKouriten.aspx.cs">
+      <DependentUpon>MstKouriten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\MstKouriten.aspx.designer.cs">
+      <DependentUpon>MstKouriten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\AchievementRegistrationMenu.aspx.cs">
+      <DependentUpon>AchievementRegistrationMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KouritenAchievement\AchievementRegistrationMenu.aspx.designer.cs">
+      <DependentUpon>AchievementRegistrationMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\KouritenCorrectionDeleteAchievements.aspx.cs">
+      <DependentUpon>KouritenCorrectionDeleteAchievements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\KouritenCorrectionDeleteAchievements.aspx.designer.cs">
+      <DependentUpon>KouritenCorrectionDeleteAchievements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\KouritenRegistrationAchievements.aspx.cs">
+      <DependentUpon>KouritenRegistrationAchievements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\KouritenRegistrationAchievements.aspx.designer.cs">
+      <DependentUpon>KouritenRegistrationAchievements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\orositenSearchdialog.aspx.cs">
+      <DependentUpon>orositenSearchdialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\orositenSearchdialog.aspx.designer.cs">
+      <DependentUpon>orositenSearchdialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\ShohinSearchdialog.aspx.cs">
+      <DependentUpon>ShohinSearchdialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KouritenAchievement\ShohinSearchdialog.aspx.designer.cs">
+      <DependentUpon>ShohinSearchdialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\MstOroshiten.aspx.cs">
+      <DependentUpon>MstOroshiten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\MstOroshiten.aspx.designer.cs">
+      <DependentUpon>MstOroshiten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\MstOroshitenMente.aspx.cs">
+      <DependentUpon>MstOroshitenMente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\MstOroshitenMente.aspx.designer.cs">
+      <DependentUpon>MstOroshitenMente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TstOutputList.aspx.cs">
+      <DependentUpon>TstOutputList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TstOutputList.aspx.designer.cs">
+      <DependentUpon>TstOutputList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\WebForm1TEST.aspx.cs">
+      <DependentUpon>WebForm1TEST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\WebForm1TEST.aspx.designer.cs">
+      <DependentUpon>WebForm1TEST.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55383</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

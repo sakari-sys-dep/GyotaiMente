@@ -1,0 +1,251 @@
+﻿body {
+}
+
+/*見出し*/
+h1 {
+    color: #6594e0; /*文字色*/
+    /*線の種類（点線）2px 黒色*/
+    border-bottom: solid 2px black;
+}
+
+#example {
+    margin: auto;
+}
+
+input.center3K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    ime-mode: disabled;
+}
+
+input.center5K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    ime-mode: disabled;
+}
+
+nput.center6K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    ime-mode: disabled;
+}
+
+input.center8K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    ime-mode:disabled;
+}
+
+input.center12K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    ime-mode: disabled;
+}
+
+
+input.left12K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 120px;
+    height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+input.left16K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 160px;
+    height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+input.left20K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 200px;
+    height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+
+input.right6K {
+    background-color: #ffffcc; /* 背景は淡い黄色 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 60px;
+    height: 20px;
+    text-overflow: ellipsis;
+    text-align: right;
+    ime-mode: disabled;
+}
+
+
+input.center1 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 10px;
+    height: 20px;
+    text-align: center;
+}
+
+
+input.center2 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+input.center3 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+
+input.center4 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 40px;
+    height: 20px;
+    text-align: center;
+}
+
+input.center5 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+input.center8 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 80px;
+    height: 20px;
+    text-align: center;
+}
+
+input.center10 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 100px;
+    height: 20px;
+    text-align: center;
+}
+
+
+
+input.left10 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 100px;
+    height: 20px;
+    text-align: left;
+}
+
+input.left14 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 140px;
+    height: 20px;
+    text-align: left;
+}
+
+input.left20 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 200px;
+    height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+input.left25 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 250px;
+    height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+input.left35 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 350px;
+    height: 20px;
+    text-overflow: ellipsis;
+}
+
+input.left42 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 420px;
+    height: 20px;
+    text-align: left;
+    text-overflow:ellipsis;
+}
+
+input.left62 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 620px;
+    height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+
+input.right6 {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    width: 60px;
+    height: 20px;
+    text-overflow: ellipsis;
+    text-align: right;
+    ime-mode: disabled;
+}
+
+
+input.defaultC {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    height: 20px;
+    text-align: center;
+}
+
+
+input.defaultR {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    height: 20px;
+    text-align: right;
+}
+
+input.defaultL {
+    background-color: #ffffff; /* 背景は白 */
+    border: 1px solid #7f9db9; /* 枠線は淡い青色 */
+    height: 20px;
+    text-align: left;
+}
