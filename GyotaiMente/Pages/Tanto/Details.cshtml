@@ -1,0 +1,335 @@
+﻿@page
+@model DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<form method="post">
+    <div style="text-align:left;">
+        <table class="tableDetailsList">
+            <tr>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(修正・削除対象)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>管理支店：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="shiten" asp-items="Model.kanri">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>管理部課：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.kanriCategory" asp-items="Model.kanriCategory">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>担当者名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.tanto" asp-items="Model.tanto">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <font size="5">　→　</font>
+                </td>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(新)</font></b>
+@*                        <tr>
+                            <td class="tdRight">
+                                <b>管理支店：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newsitencd" asp-items="Model.kanri">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>管理部課：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newbukacd" asp-items="Model.kanriCategory">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>担当者名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newtantocd" asp-items="Model.tanto">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>*@
+                        <tr>
+                            <td class="tdRight">
+                                <b>支店コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="2" asp-for="data.newsitencd">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>支店名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="10" asp-for="data.newsitennm">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>部課コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="4" asp-for="data.newbukacd">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>部課名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="20" asp-for="data.newbukanm">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>担当者コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="10" asp-for="data.newtantocd">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>担当者名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.newtantonm">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td style="vertical-align:top;">
+                    <table class="tableDetailsListInner">
+                        <tr>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Search" value="　検　　索　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Update" value="　登　　録　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Clear" value="　取り消し　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Back" value=" 前の画面に戻る " />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    @if (Model.shohinNotFounds is not null)
+    {
+        <td class="tableShohinDetail" style="text-align:center;">
+            @Html.DisplayFor(model => Model.shohinNotFounds)
+        </td>
+    }
+
+@if (Model.data.Lists.Count > 0)
+{
+    <div style="overflow:auto;width:auto;height:80vh;padding:5px;border:1px solid #000;">
+        <table class="table">
+            <thead>
+                <tr class="tableShohinDetailHead">
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        選択
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn1_cd)*@
+                        大業態コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_cd)*@
+                        小業態コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        系列１コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        系列２コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        系列２名
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        支店コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        支店名
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        部課コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        部課名
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        担当者コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        担当者名
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @* foreach (var item in Model.TantoList) *@
+                @for (int i = 0; i < Model.data.Lists.Count; i++ )
+                {
+                <tr class="tableShohinDetail"
+                    onMouseover="this.style.backgroundColor='yellow'"
+                    onMouseout ="this.style.backgroundColor='white'"    
+                >
+                        <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.CheckBoxFor(model => model.data.Lists[i].IsDelete)
+                        </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(model => model.data.Lists[i].kbn1_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].kbn1_cd)
+                    </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].kbn2_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].kbn2_cd)
+                    </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].kei1_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].kei1_cd)
+                        </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].kei2_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].kei2_cd)
+                        </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].kei2_name)
+                                @Html.HiddenFor(model => model.data.Lists[i].kei2_name)
+                    </td>
+                                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].siten_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].siten_cd)
+                        </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].siten_name)
+                                @Html.HiddenFor(model => model.data.Lists[i].siten_name)
+                    </td>
+                                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].buka_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].buka_cd)
+                        </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].buka_name)
+                                @Html.HiddenFor(model => model.data.Lists[i].buka_name)
+                    </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].tanto_cd)
+                                @Html.HiddenFor(model => model.data.Lists[i].tanto_cd)
+                        </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.Lists[i].tanto_name)
+                                @Html.HiddenFor(model => model.data.Lists[i].tanto_name)
+                        </td>
+                </tr>
+        }
+        </tbody>
+    </table>
+    </div>
+}
+</form>
+
+@section scripts{
+    <script>
+        //管理支店から絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#shiten").on("change", function () {
+                let category = $(this).val();
+                $("#data_kanriCategory").empty();
+                $("#data_kanriCategory").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kanris&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_kanriCategory").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+        //部門コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_kanriCategory").on("change", function () {
+                let category = $(this).val();
+                $("#data_tanto").empty();
+                $("#data_tanto").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Tantos&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_tanto").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+        $(document).ready(function () {
+            $('tr').click(function (event) {
+                // チェックボックスがチェックされたら無視
+                if (event.target.type !== 'checkbox') {
+                    $(':checkbox', this).trigger('click');
+                }
+            });
+        });
+    </script>
+}

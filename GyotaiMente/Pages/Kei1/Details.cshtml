@@ -1,0 +1,292 @@
+﻿@page
+@model DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<form method="post">
+    <div style="text-align:left;">
+    <table class="tableDetailsList">
+        <tr>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(修正・削除)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.code" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>小業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.code2" asp-items="Model.small">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.code3" asp-items="Model.kei1">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.name">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <font size="5">　→　</font>
+                </td>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(新)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newcode" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>小業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newcode2" asp-items="Model.small">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newcode3" asp-items="Model.kei1">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.newname">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+        </tr>
+
+    </table>
+    <table class="tableDetailsList">
+        <tr>
+            <td style="vertical-align:top;">
+                    <table class="tableDetailsListInner">
+                        <tr>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Update" value="　修　　正　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Delete" value="　削　　除　" />
+                            </td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+        <table class="tableDetailsList">
+            <tr>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(新規登録)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.regist" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>小業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.regist2" asp-items="Model.small">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="3" asp-for="data.regist3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.rename">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+        <table class="tableDetailsList">
+            <tr>
+                <td style="vertical-align:top;">
+                    <table class="tableDetailsListInner">
+                        <tr>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Regist" value="　登　　録　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Clear" value="　取り消し　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Back" value=" 前の画面に戻る " />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+@section scripts{ 
+<script>
+        //大業態コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code").on("change", function () {
+                let category = $(this).val();
+                $("#data_code2").empty();
+                $("#data_code2").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Smalls&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code2").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //大業態コードから絞り込み(新)
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_newcode").on("change", function () {
+                let category = $(this).val();
+                $("#data_newcode2").empty();
+                $("#data_newcode2").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Smalls&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_newcode2").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //大業態コードから絞り込み(登録)
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_regist").on("change", function () {
+                let category = $(this).val();
+                $("#data_regist2").empty();
+                $("#data_regist2").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Smalls&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_regist2").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //小業態コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code2").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_code").val();
+                $("#data_code3").empty();
+                $("#data_code3").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei1s&ID=${category.concat(category2)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code3").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //小業態コード(新)から絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_newcode2").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_newcode").val();
+                $("#data_newcode3").empty();
+                $("#data_newcode3").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei1s&ID=${category.concat(category2)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_newcode3").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+</script>
+}
+@if (Model.shohinNotFounds is not null)
+{
+    <td class="tableShohinDetail" style="text-align:center;">
+        @Html.DisplayFor(modelItem => Model.shohinNotFounds)
+    </td>
+}

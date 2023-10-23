@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Tokuisaki_BK\**" />
+    <Content Remove="Pages\Tokuisaki_BK\**" />
+    <EmbeddedResource Remove="Pages\Tokuisaki_BK\**" />
+    <None Remove="Pages\Tokuisaki_BK\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\GyotaiMenteContext - コピー.cs" />
+    <Compile Remove="Models\Tokuisaki.cs" />
+    <Compile Remove="Pages\Nouhinsaki\Details.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Nouhinsaki\Details.cshtml" />
+    <Content Remove="Pages\Shared\_Layout_BK.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.12" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Excel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Tokuisaki\Details.cshtml" />
+    <None Include="Pages\Tokuisaki\Index.cshtml" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties wwwroot_4lib_4bootstrap_4dist_4css_4bootstrap-reboot_1min_1css_1map__JsonSchema="https://json.schemastore.org/swcrc.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

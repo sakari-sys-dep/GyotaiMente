@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Hozin\**" />
+    <Compile Remove="Pages\Nouhinsaki\**" />
+    <Compile Remove="Pages\Shohin\**" />
+    <Compile Remove="Pages\Souko\**" />
+    <Compile Remove="Pages\Tokuisaki\**" />
+    <Compile Remove="Pages\Tokuisaki_BK\**" />
+    <Content Remove="Pages\Hozin\**" />
+    <Content Remove="Pages\Nouhinsaki\**" />
+    <Content Remove="Pages\Shohin\**" />
+    <Content Remove="Pages\Souko\**" />
+    <Content Remove="Pages\Tokuisaki\**" />
+    <Content Remove="Pages\Tokuisaki_BK\**" />
+    <EmbeddedResource Remove="Pages\Hozin\**" />
+    <EmbeddedResource Remove="Pages\Nouhinsaki\**" />
+    <EmbeddedResource Remove="Pages\Shohin\**" />
+    <EmbeddedResource Remove="Pages\Souko\**" />
+    <EmbeddedResource Remove="Pages\Tokuisaki\**" />
+    <EmbeddedResource Remove="Pages\Tokuisaki_BK\**" />
+    <None Remove="Pages\Hozin\**" />
+    <None Remove="Pages\Nouhinsaki\**" />
+    <None Remove="Pages\Shohin\**" />
+    <None Remove="Pages\Souko\**" />
+    <None Remove="Pages\Tokuisaki\**" />
+    <None Remove="Pages\Tokuisaki_BK\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\GyotaiMenteContext - コピー.cs" />
+    <Compile Remove="Data\MasterListContext.cs" />
+    <Compile Remove="Data\MasterListContextObic7.cs" />
+    <Compile Remove="Models\retContext.cs" />
+    <Compile Remove="Models\Tokuisaki.cs" />
+    <Compile Remove="Models\倉庫マスタ検索用.cs" />
+    <Compile Remove="Models\得意先マスタ_検索.cs" />
+    <Compile Remove="Models\得意先マスタ_詳細用.cs" />
+    <Compile Remove="Models\法人マスタ.cs" />
+    <Compile Remove="Models\納品先マスタ_検索用v2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Kei2 - コピー (2)\Index.cshtml" />
+    <Content Remove="Pages\Shared\_Layout_BK.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.12" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Excel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Big\Index.cshtml" />
+    <None Include="Pages\Kei1\Index.cshtml" />
+    <None Include="Pages\Tanto\Details.cshtml" />
+    <None Include="Pages\Tanto\Index.cshtml" />
+    <None Include="Pages\Ten_cd\Index.cshtml" />
+    <None Include="Pages\Kei2\Index.cshtml" />
+    <None Include="Pages\Small\Index.cshtml" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties wwwroot_4lib_4bootstrap_4dist_4css_4bootstrap-reboot_1min_1css_1map__JsonSchema="https://json.schemastore.org/swcrc.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

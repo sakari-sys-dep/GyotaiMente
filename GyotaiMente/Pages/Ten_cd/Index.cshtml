@@ -1,0 +1,236 @@
+﻿@page
+@model             IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<form method="post">
+    <div style="text-align:left;">
+    <table class="tableShohinList">
+        <tr>
+            <td>
+                <table class="tableShohinListInner">
+                        <b><font size="5">(店コード)</font></b>
+                    <tr>
+                        <td class="tdRight">
+                            <b>大業態コード：</b>
+                        </td>
+                        <td class="tdLeft">
+                            @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code">*@
+                                <select asp-for="data.code" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td class="tdRight">
+                                <b>小業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code2">*@
+                                <select asp-for="data.code2" asp-items="Model.small">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td class="tdRight">
+                                <b>系列１コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code3">*@
+                                <select asp-for="data.code3" asp-items="Model.kei1">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td class="tdRight">
+                                <b>系列２コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code4">*@
+                                <select asp-for="data.code4" asp-items="Model.kei2">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                    </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>店名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.name">
+                            </td>
+                        </tr>
+                </table>
+            </td>
+            </tr>
+        </table>
+        <table>
+            <td style="vertical-align:top;">
+                <table class="tableShohinListInner">
+                    <tr>
+                        <td colspan="7">
+                            <input type="submit" asp-page-handler="Search" target="_blank" value="　検　　索　" />
+                        </td>
+                        <td>
+                        </td>
+                        <td colspan="7">
+                            <input type="submit" asp-page-handler="Excel" value=" Excel 作成 " />
+                        </td>
+                        <td>
+                        </td>
+                        <td colspan="7">
+                            <input type="submit" asp-page-handler="Clear" value="　取り消し　" />
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align:top;">
+                <table class="tableShohinListInner">
+                    <tr>
+                        <td colspan="7">
+                            <input type="submit" asp-page="./Details" target="_blank" value=" 修正・削除 " />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </table>
+    </div>
+</form>
+@section scripts{ 
+<script>
+        //大業態コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code").on("change", function () {
+                let category = $(this).val();
+                $("#data_code2").empty();
+                $("#data_code2").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Smalls&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code2").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+        //小業態コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code2").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_code").val();
+                $("#data_code3").empty();
+                $("#data_code3").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei1s&ID=${category2.concat(category)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code3").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //系列１コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code3").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_code2").val();
+                let category3 = $("#data_code").val();
+                $("#data_code4").empty();
+                $("#data_code4").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei2s&ID=${(category3.concat(category2)).concat(category)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code4").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+</script>
+}
+
+@if (Model.ten_cdList is not null)
+{
+    <div style="overflow:auto;width:auto;height:80vh;padding:5px;border:1px solid #000;">
+    <table class="table">
+        <thead>
+            <tr class="tableShohinDetailHead">
+                <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn1_cd)*@
+                        大業態コード
+                </th>
+                <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_cd)*@
+                        小業態コード
+                </th>
+                <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        系列１コード
+                </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        系列２コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        店コード
+                    </th>
+                    <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        店名
+                    </th>
+            </tr>
+        </thead>
+        
+        <tbody>
+                @foreach (var item in Model.ten_cdList)
+                {
+                <tr class="tableShohinDetail"
+                    onMouseover="this.style.backgroundColor='yellow'"
+                    onMouseout ="this.style.backgroundColor='white'"    
+                >
+                    <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.kbn1_cd)
+                    </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.kbn2_cd)
+                    </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.kei1_cd)
+                        </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.kei2_cd)
+                        </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.ten_cd)
+                    </td>
+                        <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.km01d_yagou_k)
+                        </td>
+                </tr>
+        }
+        </tbody>
+    </table>
+    </div>
+}
+else
+{
+    @if (Model.shohinNotFounds is not null)
+    {
+    <td class="tableShohinDetail" style="text-align:center;">
+        @Html.DisplayFor(modelItem => Model.shohinNotFounds)
+    </td>
+    }
+}

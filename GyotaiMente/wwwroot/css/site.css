@@ -1,0 +1,237 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-top:0px;
+    margin-bottom: 0px;
+    font-size: 10pt;
+    font-family: 'MS Mincho'
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+.tableShohinList {
+    border: double;
+    background-color: #66CDAA;
+}
+.tableDetailsList {
+    background-color: #48d1cc;
+}
+
+.tableShohinListInner {
+    background-color: #66CDAA;
+    border-collapse: separate;
+}
+.tableDetailsListInner {
+    background-color: #48d1cc;
+    border-collapse: separate;
+}
+.tableShohinDetailHead {
+    background-color: #66CDAA;
+    position: sticky;
+    top : 0;
+    border: double;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+.tableShohinDetail {
+    border: double;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableMessageDetail {
+    border: double;
+    white-space: nowrap;
+    width: fit-content;
+    font-size:200%;
+}
+
+.tableHozinDetailHead {
+    background-color: #afeeee;
+    border: double;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableHozinDetail {
+    border: double;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableSoukoDetailHead {
+    background-color: #ee82ee;
+    border: double;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableSoukoDetail {
+    border: double;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableNohinsakiDetailHead {
+    background-color: #90ee90;
+    border: double;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableNohinsakiDetail {
+    border: double;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableTokuisakiList {
+    border: double;
+    background-color: #00bfff;
+}
+
+.tableTokuisakiListInner {
+    background-color: #87ceeb;
+    border-collapse: separate;
+}
+
+.tableTokuisakiDetailHead {
+    background-color: #afeeee;
+    border: double;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tableTokuisakiDetail {
+    border: double;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+
+
+tr {
+}
+
+td{
+}
+.tdRight {
+    text-align: right;
+}
+.tdLeft {
+    text-align: left;
+}
+.tdDetailsLeft {
+    background-color: #d2b48c;
+    border: double;
+    border-color: #cd853f;
+    text-align:left;
+}
+.tdDetailsRight {
+    border: double;
+    border-color: #cd853f
+}
+
+
+input {
+    height: 25px
+}
+.inputShohinCode{
+    max-width:100px;
+    text-align:right;
+}
+.inputShohinEda {
+    max-width: 30px;
+    text-align: right;
+}
+.inputShohinName {
+    max-width: 240px;
+    text-align: left;
+}
+.inputShohinYoryo {
+    max-width: 70px;
+    text-align: right;
+}
+.inputShohinIrisu {
+    max-width: 70px;
+    text-align: right;
+}
+.inputShohinJancd {
+    max-width: 140px;
+    text-align: left;
+}
+.inputShohinCaseJancd {
+    max-width: 170px;
+    text-align: left;
+}
+.inputShohinGtin {
+    max-width: 170px;
+    text-align: left;
+}
+.inputShohinItf {
+    max-width: 170px;
+    text-align: left;
+}
+.inputShohinChougo {
+    max-width: 50px;
+    text-align: left;
+}
+
+
+.inputTokuisakiCode {
+    max-width: 60px;
+    text-align: right;
+}
+.inputTokuisakiName {
+    max-width: 240px;
+    text-align: left;
+}
+.inputTokuisakiBumonName {
+    max-width: 70px;
+    text-align: right;
+}
+.inputTokuisakiTantocd {
+    max-width: 120px;
+    text-align: left;
+}
+.inputTokuisakiTanto {
+    max-width: 140px;
+    text-align: left;
+}
+.inputTokuisakiPrefacture {
+    max-width: 120px;
+    text-align: left;
+}
+.inputTokuisakiAddress {
+    max-width: 240px;
+    text-align: left;
+}
+.inputTokuisakiShopcd {
+    max-width: 120px;
+    text-align: left;
+}
+
+select {
+    height: 25px
+}
+

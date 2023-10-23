@@ -1,0 +1,21 @@
+﻿@page
+@model AuthenticationApp.Pages.Account.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+<html>
+<head>
+</head>
+<body>
+    <h1>ログイン</h1>
+    <form method="post">
+        ID:<input type="text" asp-for="InputUserID" /><br />
+        Password:<input type="password" asp-for="InputPassword" /><br />
+        @if (Model.OutMessage != "")
+        {
+            <div>@Model.OutMessage</div>
+        }
+        <input type="submit" value="ログイン" /><br />
+    </form>
+</body>
+</html>

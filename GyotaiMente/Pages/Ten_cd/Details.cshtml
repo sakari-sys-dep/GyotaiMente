@@ -1,0 +1,365 @@
+﻿@page
+@model DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<form method="post">
+    <div style="text-align:left;">
+        <table class="tableDetailsList">
+            <tr>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(修正・削除対象)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code">*@
+                                <select asp-for="data.code" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>小業態：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code2">*@
+                                <select asp-for="data.code2" asp-items="Model.small">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code3">*@
+                                <select asp-for="data.code3" asp-items="Model.kei1">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列２：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code4">*@
+                                <select asp-for="data.code4" asp-items="Model.kei2">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>店コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="8" asp-for="data.code5">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <font size="5">　→　</font>
+                </td>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(新)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.newcode">*@
+                                <select asp-for="data.newcode" asp-items="Model.nbig">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>小業態：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.newcode2">*@
+                                <select asp-for="data.newcode2" asp-items="Model.nsmall">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列１：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.newcode3">*@
+                                <select asp-for="data.newcode3" asp-items="Model.nkei1">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>系列２：</b>
+                            </td>
+                            <td class="tdLeft">
+                                @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.newcode4">*@
+                                <select asp-for="data.newcode4" asp-items="Model.nkei2">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td style="vertical-align:top;">
+                    <table class="tableDetailsListInner">
+                        <tr>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Search" value="　検　　索　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Update" value="　登　　録　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Clear" value="　取り消し　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Back" value=" 前の画面に戻る " />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    @*メッセージ*@
+    @if (Model.shohinNotFounds is not null)
+    {
+        <td class="tableShohinDetail" style="text-align:center;">
+            @Html.DisplayFor(modelItem => Model.shohinNotFounds)
+        </td>
+    }
+
+    @if (Model.Ten_cdList is not null)
+    {
+        <div style="overflow:auto;width:auto;height:80vh;padding:5px;border:1px solid #000;">
+            <table class="table">
+                <thead>
+                    <tr class="tableShohinDetailHead">
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn1_cd)*@
+                            選択
+                        </th>
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn1_cd)*@
+                            大業態コード
+                        </th>
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_cd)*@
+                            小業態コード
+                        </th>
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                            系列１コード
+                        </th>
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                            系列２コード
+                        </th>
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                            店コード
+                        </th>
+                        <th class="tableShohinDetailHead">
+                            @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                            店名
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @for (int i = 0; i < Model.data.TenLists.Count; i++)
+                    {
+                        <tr class="tableShohinDetail"
+                            onMouseover="this.style.backgroundColor='yellow'"
+                            onMouseout="this.style.backgroundColor='white'">
+                            <td class="tdLeft">
+                                @Html.CheckBoxFor(model => model.data.TenLists[i].IsDelete)
+                            </td>
+                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.TenLists[i].kbn1_cd)
+                                @Html.HiddenFor(model => model.data.TenLists[i].kbn1_cd)
+                            </td>
+                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.TenLists[i].kbn2_cd)
+                                @Html.HiddenFor(model => model.data.TenLists[i].kbn2_cd)
+                            </td>
+                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.TenLists[i].kei1_cd)
+                                @Html.HiddenFor(model => model.data.TenLists[i].kei1_cd)
+                            </td>
+                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.TenLists[i].kei2_cd)
+                                @Html.HiddenFor(model => model.data.TenLists[i].kei2_cd)
+                            </td>
+                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.TenLists[i].ten_cd)
+                                @Html.HiddenFor(model => model.data.TenLists[i].ten_cd)
+                            </td>
+                            <td class="tableShohinDetail" style="text-align:center;">
+                                @Html.DisplayFor(model => model.data.TenLists[i].km01d_yagou_k)
+                                @Html.HiddenFor(model => model.data.TenLists[i].km01d_yagou_k)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+
+</form>
+@section scripts{ 
+<script>
+        //大業態コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code").on("change", function () {
+                let category = $(this).val();
+                $("#data_code2").empty();
+                $("#data_code2").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Smalls&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code2").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //大業態コードから絞り込み(新)
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_newcode").on("change", function () {
+                let category = $(this).val();
+                $("#data_newcode2").empty();
+                $("#data_newcode2").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Smalls&ID=${category}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_newcode2").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //チェックボックス対応
+        $(document).ready(function () {
+            $('tr').click(function (event) {
+                // チェックボックスがチェックされたら無視
+                if (event.target.type !== 'checkbox') {
+                    $(':checkbox', this).trigger('click');
+                }
+            });
+        });
+
+        //小業態コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code2").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_code").val();
+                $("#data_code3").empty();
+                $("#data_code3").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei1s&ID=${category2.concat(category)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code3").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //小業態コード(新)から絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_newcode2").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_newcode").val();
+                $("#data_newcode3").empty();
+                $("#data_newcode3").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei1s&ID=${category2.concat(category)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_newcode3").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //系列１コードから絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_code3").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_code2").val();
+                let category3 = $("#data_code").val();
+                $("#data_code4").empty();
+                $("#data_code4").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei2s&ID=${(category3.concat(category2)).concat(category)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_code4").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+        //系列１コード(新)から絞り込み
+        $.ajaxSetup({
+            cache: false
+        });
+        $(function () {
+            $("#data_newcode3").on("change", function () {
+                let category = $(this).val();
+                let category2 = $("#data_newcode2").val();
+                let category3 = $("#data_newcode").val();
+                $("#data_newcode4").empty();
+                $("#data_newcode4").append("<option value=''>指定なし</option>");
+                $.getJSON(`?handler=Kei2s&ID=${(category3.concat(category2)).concat(category)}`, (data) => {
+                    $.each(data, function (i, item) {
+                        $("#data_newcode4").append(`<option value="${item.value}">${item.text}</option>`);
+
+                    });
+                });
+            });
+        });
+
+</script>
+}

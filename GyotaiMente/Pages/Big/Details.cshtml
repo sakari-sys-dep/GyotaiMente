@@ -1,0 +1,141 @@
+﻿@page
+@model DetailModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<form method="post">
+    <div style="text-align:left;">
+        <table class="tableDetailsList">
+        <tr>
+            <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(修正・削除対象)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.code" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                        </tr>
+                </table>
+            </td>
+                <td>
+                    <font size="5">　→　</font>
+                </td>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(新)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <select asp-for="data.newcode" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.newname">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+        </tr>
+        </table>
+        <table class="tableDetailsList">
+            <tr>
+                <td style="vertical-align:top;">
+                    <table class="tableDetailsListInner">
+                    <tr>
+                        <td colspan="7">
+                                <input type="submit" asp-page-handler="Update" value="　修　　正　" />
+                        </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Delete" value="　削　　除　" />
+                            </td>
+                    </tr>
+                    </table>
+                 </td>
+        　  </tr>
+        </table>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <table class="tableDetailsList">
+            <tr>
+                <td>
+                    <table class="tableDetailsListInner">
+                        <b><font size="5">(新規登録)</font></b>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態コード：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinCode" maxlength="3" asp-for="data.regist">
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdRight">
+                                <b>大業態名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.rename">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <table class="tableDetailsList">
+            <tr>
+                <td style="vertical-align:top;">
+                    <table class="tableDetailsListInner">
+                        <tr>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Regist" value="　登　　録　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Clear" value="　取り消し　" />
+                            </td>
+                            <td>
+                            </td>
+                            <td colspan="7">
+                                <input type="submit" asp-page-handler="Back" value=" 前の画面に戻る " />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+@if (Model.shohinNotFounds is not null)
+{
+    <td class="tableShohinDetail" style="text-align:center;">
+        @Html.DisplayFor(modelItem => Model.shohinNotFounds)
+    </td>
+}

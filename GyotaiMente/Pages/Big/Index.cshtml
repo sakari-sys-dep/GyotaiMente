@@ -1,0 +1,122 @@
+﻿@page
+@model             IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<form method="post">
+    <div style="text-align:left;">
+    <table class="tableShohinList">
+        <tr>
+            <td>
+                <table class="tableShohinListInner">
+                        <b><font size="5">(大業態)</font></b>
+                    <tr>
+                        <td class="tdRight">
+                            <b>大業態コード：</b>
+                        </td>
+                        <td class="tdLeft">
+                            @*<input type="text" class="inputShohinCode" maxlength="3" asp-for="data.code">*@
+                                <select asp-for="data.code" asp-items="Model.big">
+                                    <option value="">指定なし</option>
+                                </select>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                   <tr>
+                            <td class="tdRight">
+                                <b>大業態名：</b>
+                            </td>
+                            <td class="tdLeft">
+                                <input type="text" class="inputShohinName" maxlength="20" asp-for="data.name">
+                            </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table>
+            <td style="vertical-align:top;">
+                <table class="tableShohinListInner">
+                    <tr>
+                        <td colspan="7">
+                                <input type="submit" asp-page-handler="Search" value="　検　　索　" />
+                        </td>
+                        <td>
+                        </td>
+                        <td colspan="7">
+                                <input type="submit" asp-page-handler="Excel" value=" Excel 作成 " />
+                        </td>
+                        <td>
+                        </td>
+                        <td colspan="7">
+                            <input type="submit" asp-page-handler="Clear" value="　取り消し　" />
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align:top;">
+                <table class="tableShohinListInner">
+                    <tr>
+                        <td colspan="7">
+                            <input type="submit" asp-page="./Details" target="_blank" value=" 修正・削除 " />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+    </table>
+</div>
+</form>
+@section scripts{ 
+<script>
+</script>
+}
+
+@if (Model.bigList is not null)
+{
+    <div style="overflow:auto;width:auto;height:80vh;padding:5px;border:1px solid #000;">
+    <table class="table">
+        <thead>
+            <tr class="tableShohinDetailHead">
+                <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn1_cd)*@
+                        大業態コード
+                </th>
+                <th class="tableShohinDetailHead">
+                        @*@Html.DisplayNameFor(model => model.smallList[0].ms01d_small_kbn2_name)*@
+                        大業態名
+                </th>
+            </tr>
+        </thead>
+        
+        <tbody>
+                @foreach (var item in Model.bigList)
+                {
+                <tr class="tableShohinDetail"
+                    onMouseover="this.style.backgroundColor='yellow'"
+                    onMouseout ="this.style.backgroundColor='white'"    
+                >
+                    <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.ms01d_big_kbn1_cd)
+                    </td>
+                    <td class="tableShohinDetail" style="text-align:center;">
+                            @Html.DisplayFor(modelItem => item.ms01d_big_kbn1_name)
+                    </td>
+                </tr>
+        }
+        </tbody>
+    </table>
+    </div>
+}
+else
+{
+    @if (Model.shohinNotFounds is not null)
+    {
+        <p><b> 検索結果は０件です。 </b></p>
+    }
+}
